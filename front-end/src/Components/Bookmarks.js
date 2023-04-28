@@ -14,6 +14,8 @@ function Bookmarks() {
     .get(`${API}/bookmarks`)
     .then((res) => {
       setBookmarks(res.data)
+    }).catch((e)=> {
+      console.warn("catch", e);
     })
   }, []);
 
